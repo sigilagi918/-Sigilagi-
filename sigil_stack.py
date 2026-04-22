@@ -1,12 +1,14 @@
 from __future__ import annotations
 from typing import Dict, Any
 import json
+from pathlib import Path
 
 from proxy_pointer_rag import ProxyPointerRAG
 from system_refiner import SystemRefiner
 from discount_combiner import DiscountCombiner, DiscountRule
 from enhancement_discovery import EnhancementDiscovery
 from registry_manifest import RegistryManifest
+from corpus_loader import CorpusLoader
 
 
 class SigilAGIStack:
@@ -16,18 +18,13 @@ class SigilAGIStack:
         self.combiner = DiscountCombiner()
         self.discovery = EnhancementDiscovery()
         self.registry = RegistryManifest()
+        self.base_dir = Path(__file__).resolve().parent
 
     def load_demo_state(self) -> None:
-        self.rag.add_document(
-            "glyph-core",
-            "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
-            {"layer": "core"},
-        )
-        self.rag.add_document(
-            "sigil-rag",
-            "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
-            {"layer": "retrieval"},
-        )
+        corpus = CorpusLoader(self.base_dir / "corpus.json").load()
+        for doc in corpus:
+            self.rag.add_document(doc["doc_id"], doc["text"], doc["metadata"])
+
         self.combiner.add_rule(DiscountRule(priority=10, name="launch10", kind="percent", value=10.0))
         self.combiner.add_rule(DiscountRule(priority=20, name="vip5", kind="fixed", value=5.0))
 
@@ -37,7 +34,9 @@ class SigilAGIStack:
             "discount_combiner.py",
             "enhancement_discovery.py",
             "registry_manifest.py",
+            "corpus_loader.py",
             "sigil_stack.py",
+            "corpus.json",
         ])
         self.registry.apply_state(boot_verified=True, rehydrated=True)
 
