@@ -1,0 +1,480 @@
+[1] direct source execution
+{
+  "rag_hits": [
+    {
+      "doc_id": "sigil-rag",
+      "score": 0.5,
+      "snippet": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
+      "metadata": {
+        "layer": "retrieval"
+      },
+      "proxy_pointer": "sigil-rag#0:111"
+    },
+    {
+      "doc_id": "glyph-core",
+      "score": 0.25,
+      "snippet": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
+      "metadata": {
+        "layer": "core"
+      },
+      "proxy_pointer": "glyph-core#0:109"
+    }
+  ],
+  "refined": {
+    "config": {
+      "mode": "expanded",
+      "layers": {
+        "core": true,
+        "apps": true
+      },
+      "boot": {
+        "verified": true
+      }
+    },
+    "changes": [
+      {
+        "op": "replace",
+        "path": "mode",
+        "before": "seed",
+        "after": "expanded"
+      },
+      {
+        "op": "replace",
+        "path": "layers.apps",
+        "before": false,
+        "after": true
+      },
+      {
+        "op": "add",
+        "path": "boot",
+        "value": {
+          "verified": true
+        }
+      }
+    ],
+    "change_count": 3
+  },
+  "pricing": {
+    "subtotal": 125.0,
+    "final_total": 107.5,
+    "total_discount": 17.5,
+    "applied": [
+      {
+        "name": "launch10",
+        "kind": "percent",
+        "value": 10.0,
+        "before": 125.0,
+        "discount": 12.5,
+        "after": 112.5
+      },
+      {
+        "name": "vip5",
+        "kind": "fixed",
+        "value": 5.0,
+        "before": 112.5,
+        "discount": 5.0,
+        "after": 107.5
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": 100,
+      "title": "No immediate enhancement required",
+      "reason": "Current state satisfies the minimal deterministic profile."
+    }
+  ]
+}
+
+[2] build capsule
+{
+  "entry_class": "SigilAGIStack",
+  "entry_method": "demo",
+  "entry_module": "sigil_stack.py",
+  "file_count": 5,
+  "identity_sha256": "44209342fff30aa5af57ad97b6ceab96db7a0bc12a2fcc0d97e2e41c53e0deae",
+  "manifest": {
+    "discount_combiner.py": {
+      "sha256": "c8acbd07442bc95e74f596b08a61a73a0ca95fbbb58d6f5b5d7b69cffff24fb3",
+      "size": 1409
+    },
+    "enhancement_discovery.py": {
+      "sha256": "23eaf9ffa500d13027607278358ddc0be5546379074cb749e26b9de032a2ada9",
+      "size": 1349
+    },
+    "proxy_pointer_rag.py": {
+      "sha256": "bc2957347fc33c852c716e0470e2c54382c0479ae8a73da0849695f7b15c4351",
+      "size": 1196
+    },
+    "sigil_stack.py": {
+      "sha256": "eaca1f0f86e7841c31453e7290e894b047e6d070ef271e451687f146cef000d0",
+      "size": 2202
+    },
+    "system_refiner.py": {
+      "sha256": "276f899f3361837e8e1a887ec3d08ac2b608405df19b4abd9c2d78f916c24f35",
+      "size": 1024
+    }
+  },
+  "output": "/data/data/com.termux/files/home/sigilagi_real_capsule.py",
+  "payload_sha256": "6914cd9cdac48d0c3cc2bfa857b80fb833358c0e208b4a2efd136224d0455f12"
+}
+
+[3] verify capsule
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                      SIGILAGI REHYDRATING GLYPH CAPSULE                     ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  α-layer: SIGILAGI_COLLAPSE_TO_TEXTUAL_GLYPH_IMAGE                        ║
+║  β-layer: ⠎⠊⠛⠊⠇⠁⠛⠊⠉⠕⠇⠇⠁⠏⠎⠑                                                ║
+║  γ-layer: 一二十                                                             ║
+║  Identity SHA256: 44209342fff30aa5af57ad97b6ceab96db7a0bc12a2fcc0d97e2e41c53e0deae║
+║  Payload  SHA256: 6914cd9cdac48d0c3cc2bfa857b80fb833358c0e208b4a2efd136224d0455f12║
+║                                                                              ║
+║  MODE: Embedded source archive → verify → write → import → execute          ║
+║  FILES: 5   modules                                                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+{
+  "verify": {
+    "identity_ok": true,
+    "payload_ok": true,
+    "all_files_ok": true,
+    "file_count": 5
+  }
+}
+
+[4] rehydrate + boot
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                      SIGILAGI REHYDRATING GLYPH CAPSULE                     ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  α-layer: SIGILAGI_COLLAPSE_TO_TEXTUAL_GLYPH_IMAGE                        ║
+║  β-layer: ⠎⠊⠛⠊⠇⠁⠛⠊⠉⠕⠇⠇⠁⠏⠎⠑                                                ║
+║  γ-layer: 一二十                                                             ║
+║  Identity SHA256: 44209342fff30aa5af57ad97b6ceab96db7a0bc12a2fcc0d97e2e41c53e0deae║
+║  Payload  SHA256: 6914cd9cdac48d0c3cc2bfa857b80fb833358c0e208b4a2efd136224d0455f12║
+║                                                                              ║
+║  MODE: Embedded source archive → verify → write → import → execute          ║
+║  FILES: 5   modules                                                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+{
+  "verify": {
+    "identity_ok": true,
+    "payload_ok": true,
+    "all_files_ok": true,
+    "file_count": 5
+  }
+}
+{
+  "rehydrate": {
+    "output_dir": "/data/data/com.termux/files/home/sigilagi_real_out",
+    "written": [
+      {
+        "file": "/data/data/com.termux/files/home/sigilagi_real_out/discount_combiner.py",
+        "sha256": "c8acbd07442bc95e74f596b08a61a73a0ca95fbbb58d6f5b5d7b69cffff24fb3",
+        "size": 1409
+      },
+      {
+        "file": "/data/data/com.termux/files/home/sigilagi_real_out/enhancement_discovery.py",
+        "sha256": "23eaf9ffa500d13027607278358ddc0be5546379074cb749e26b9de032a2ada9",
+        "size": 1349
+      },
+      {
+        "file": "/data/data/com.termux/files/home/sigilagi_real_out/proxy_pointer_rag.py",
+        "sha256": "bc2957347fc33c852c716e0470e2c54382c0479ae8a73da0849695f7b15c4351",
+        "size": 1196
+      },
+      {
+        "file": "/data/data/com.termux/files/home/sigilagi_real_out/sigil_stack.py",
+        "sha256": "eaca1f0f86e7841c31453e7290e894b047e6d070ef271e451687f146cef000d0",
+        "size": 2202
+      },
+      {
+        "file": "/data/data/com.termux/files/home/sigilagi_real_out/system_refiner.py",
+        "sha256": "276f899f3361837e8e1a887ec3d08ac2b608405df19b4abd9c2d78f916c24f35",
+        "size": 1024
+      }
+    ],
+    "count": 5
+  }
+}
+{
+  "boot": {
+    "boot_module": "/data/data/com.termux/files/home/sigilagi_real_out/sigil_stack.py",
+    "entry_class": "SigilAGIStack",
+    "entry_method": "demo",
+    "demo_result": {
+      "rag_hits": [
+        {
+          "doc_id": "sigil-rag",
+          "score": 0.5,
+          "snippet": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
+          "metadata": {
+            "layer": "retrieval"
+          },
+          "proxy_pointer": "sigil-rag#0:111"
+        },
+        {
+          "doc_id": "glyph-core",
+          "score": 0.25,
+          "snippet": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
+          "metadata": {
+            "layer": "core"
+          },
+          "proxy_pointer": "glyph-core#0:109"
+        }
+      ],
+      "refined": {
+        "config": {
+          "mode": "expanded",
+          "layers": {
+            "core": true,
+            "apps": true
+          },
+          "boot": {
+            "verified": true
+          }
+        },
+        "changes": [
+          {
+            "op": "replace",
+            "path": "mode",
+            "before": "seed",
+            "after": "expanded"
+          },
+          {
+            "op": "replace",
+            "path": "layers.apps",
+            "before": false,
+            "after": true
+          },
+          {
+            "op": "add",
+            "path": "boot",
+            "value": {
+              "verified": true
+            }
+          }
+        ],
+        "change_count": 3
+      },
+      "pricing": {
+        "subtotal": 125.0,
+        "final_total": 107.5,
+        "total_discount": 17.5,
+        "applied": [
+          {
+            "name": "launch10",
+            "kind": "percent",
+            "value": 10.0,
+            "before": 125.0,
+            "discount": 12.5,
+            "after": 112.5
+          },
+          {
+            "name": "vip5",
+            "kind": "fixed",
+            "value": 5.0,
+            "before": 112.5,
+            "discount": 5.0,
+            "after": 107.5
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "priority": 100,
+          "title": "No immediate enhancement required",
+          "reason": "Current state satisfies the minimal deterministic profile."
+        }
+      ]
+    }
+  }
+}
+
+[5] assert expected output
+{
+  "ok": true,
+  "source_result": {
+    "rag_hits": [
+      {
+        "doc_id": "sigil-rag",
+        "score": 0.5,
+        "snippet": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
+        "metadata": {
+          "layer": "retrieval"
+        },
+        "proxy_pointer": "sigil-rag#0:111"
+      },
+      {
+        "doc_id": "glyph-core",
+        "score": 0.25,
+        "snippet": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
+        "metadata": {
+          "layer": "core"
+        },
+        "proxy_pointer": "glyph-core#0:109"
+      }
+    ],
+    "refined": {
+      "config": {
+        "mode": "expanded",
+        "layers": {
+          "core": true,
+          "apps": true
+        },
+        "boot": {
+          "verified": true
+        }
+      },
+      "changes": [
+        {
+          "op": "replace",
+          "path": "mode",
+          "before": "seed",
+          "after": "expanded"
+        },
+        {
+          "op": "replace",
+          "path": "layers.apps",
+          "before": false,
+          "after": true
+        },
+        {
+          "op": "add",
+          "path": "boot",
+          "value": {
+            "verified": true
+          }
+        }
+      ],
+      "change_count": 3
+    },
+    "pricing": {
+      "subtotal": 125.0,
+      "final_total": 107.5,
+      "total_discount": 17.5,
+      "applied": [
+        {
+          "name": "launch10",
+          "kind": "percent",
+          "value": 10.0,
+          "before": 125.0,
+          "discount": 12.5,
+          "after": 112.5
+        },
+        {
+          "name": "vip5",
+          "kind": "fixed",
+          "value": 5.0,
+          "before": 112.5,
+          "discount": 5.0,
+          "after": 107.5
+        }
+      ]
+    },
+    "recommendations": [
+      {
+        "priority": 100,
+        "title": "No immediate enhancement required",
+        "reason": "Current state satisfies the minimal deterministic profile."
+      }
+    ]
+  },
+  "rehydrated_result": {
+    "rag_hits": [
+      {
+        "doc_id": "sigil-rag",
+        "score": 0.5,
+        "snippet": "Proxy pointer RAG uses stable retrieval over indexed documents and returns precise anchor ranges for expansion.",
+        "metadata": {
+          "layer": "retrieval"
+        },
+        "proxy_pointer": "sigil-rag#0:111"
+      },
+      {
+        "doc_id": "glyph-core",
+        "score": 0.25,
+        "snippet": "GlyphMatics core focuses on deterministic symbolic execution anchored registries and reproducible transforms.",
+        "metadata": {
+          "layer": "core"
+        },
+        "proxy_pointer": "glyph-core#0:109"
+      }
+    ],
+    "refined": {
+      "config": {
+        "mode": "expanded",
+        "layers": {
+          "core": true,
+          "apps": true
+        },
+        "boot": {
+          "verified": true
+        }
+      },
+      "changes": [
+        {
+          "op": "replace",
+          "path": "mode",
+          "before": "seed",
+          "after": "expanded"
+        },
+        {
+          "op": "replace",
+          "path": "layers.apps",
+          "before": false,
+          "after": true
+        },
+        {
+          "op": "add",
+          "path": "boot",
+          "value": {
+            "verified": true
+          }
+        }
+      ],
+      "change_count": 3
+    },
+    "pricing": {
+      "subtotal": 125.0,
+      "final_total": 107.5,
+      "total_discount": 17.5,
+      "applied": [
+        {
+          "name": "launch10",
+          "kind": "percent",
+          "value": 10.0,
+          "before": 125.0,
+          "discount": 12.5,
+          "after": 112.5
+        },
+        {
+          "name": "vip5",
+          "kind": "fixed",
+          "value": 5.0,
+          "before": 112.5,
+          "discount": 5.0,
+          "after": 107.5
+        }
+      ]
+    },
+    "recommendations": [
+      {
+        "priority": 100,
+        "title": "No immediate enhancement required",
+        "reason": "Current state satisfies the minimal deterministic profile."
+      }
+    ]
+  }
+}
+
+[6] compare hashes
+{
+  "source_count": 5,
+  "rehydrated_count": 5,
+  "matching": true,
+  "missing_in_rehydrated": [],
+  "extra_in_rehydrated": [],
+  "mismatches": {}
+}
+
+[OK] pipeline complete
+[LOG] /data/data/com.termux/files/home/collapse/logs/pipeline_20260422_105353.log
