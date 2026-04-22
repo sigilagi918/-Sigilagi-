@@ -23,3 +23,5 @@ Run the full pipeline:
 
 ```bash
 bash ~/collapse/run_pipeline.sh
+python3 ~/sigilagi_real_capsule.py --verify-only
+python3 ~/collapse/compare_rehydrated_hashes.py --source ~/sigilagi_real --rehydrated ~/sigilagi_real_out
